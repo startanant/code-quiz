@@ -109,8 +109,6 @@ function verifyAnswer()
 
 function showSlide(n) {
     if (n == 999) {
-        slides[currentSlide].classList.remove('active-slide');
-
         quizContainer.innerHTML = `Enter your name. 
         Your score is ${numCorrect} 
         <input type="text" id="name"><button onclick="saveScore()">Save</button>`;
@@ -121,7 +119,6 @@ function showSlide(n) {
             showScore();
         }
         else{
-            console.log(n);
             slides[currentSlide].classList.remove('active-slide');
             if(n < slides.length) {
                 slides[n].classList.add('active-slide');
