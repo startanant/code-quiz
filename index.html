@@ -7,11 +7,33 @@
     <title>JS quiz</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <style>
+        .slide{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s;
+        }
+        .active-slide{
+        opacity: 1;
+        z-index: 2;
+        }
+        .quiz-container{
+        position: relative;
+        height: 200px;
+        margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-
-    <div id="quiz"></div>
+    <div class="quiz-container">
+        <div id="quiz"></div>
+    </div>
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
     <button id="submit">Submit Quiz</button>
     <div id="results"></div>
     
